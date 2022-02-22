@@ -1,0 +1,41 @@
+.infoWrapper{
+    margin-top: 35px;
+    .info__app{
+        text-align: center;
+        h4{
+            font-size: 35px;
+            mix-blend-mode: overlay;
+        }
+        h5{
+            font-size: 25px;
+            mix-blend-mode: overlay;
+        }
+    }
+}
+
+@media screen and (max-width:430px) {
+    .infoWrapper{
+        .info__app{
+            h4{
+                font-size: 25px;
+            }
+            h5{
+                font-size: 18px;
+            }
+        }
+    }
+   
+}
+@media screen and (max-width:350px) {
+    .infoWrapper{
+        .info__app{
+            h4{
+                font-size: 22px;
+            }
+            h5{
+                font-size: 16px;
+            }
+        }
+    }
+    
+}
