@@ -25,12 +25,8 @@
             display: flex;
             margin-top: 25px;
             justify-content: space-around;
-            .child__weath {
-                img{
-                    border-radius: 10px;
-                }
-            }
-            .child__weath:nth-child(2){
+            
+            .child__weath{
                 margin-top: 5px;
                 margin-left: 15px;
                 p{  color: black;
@@ -53,7 +49,7 @@
             .weather__block{
                 flex-direction: column;
                 align-items: center;
-                .child__weath:nth-child(2){
+                .child__weath{
                     p{
                         margin: 5px 0;
                     }

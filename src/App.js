@@ -8,17 +8,16 @@ import './components/scss/app.scss'
 function App() {
   const initialState = {
     temp:undefined,
-    city:undefined,
     time:undefined,
     weatherForecast:undefined,
     coutry:undefined,
     humidity:undefined,
     wind:undefined,
-    icon:undefined,
+    sunrise:undefined,
+    sunset:undefined,
     error:undefined,
   }
   const [state, setState] =   useState(initialState)
-
 
 
   const  getWeather = async (e) =>{
@@ -27,31 +26,31 @@ function App() {
     let data 
   
     if(city){
-      const API_KEY = '4a60b042ab2b1d5db5f3e058eaf77de5'
-      await axios(`http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}`)
+      const API_KEY = '33HFRK92JYZSEGUCBL9BARM3C'
+    
+      await axios(` https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/?key=${API_KEY} `)
       .then((response) => data = response.data)
       
-
       setState({
-        temp:data.current.temperature,
-        city:data.location.name,
-        time:data.location.localtime,
-        weatherForecast:data.current.weather_descriptions[0],
-        country:data.location.country,
-        humidity:data.current.humidity,
-        wind:data.current.wind_speed,
-        icon:data.current.weather_icons[0],
+        temp:Math.round((data.currentConditions.temp - 32) *5/9 ),
+        time:data.currentConditions.datetime,
+        weatherForecast:data.currentConditions.icon,
+        country:data.address,
+        humidity:data.currentConditions.humidity,
+        wind:data.currentConditions.windspeed,
+        sunrise:data.currentConditions.sunrise,
+        sunset:data.currentConditions.sunset,
         error:''
       })
     }else{
       setState({
         temp:undefined,
-        city:undefined,
         time:undefined,
         weatherForecast:undefined,
         coutry:undefined,
         humidity:undefined,
         wind:undefined,
+        sunrise:undefined,
         sunset:undefined,
         error:"Enter the name of the city",
       })
@@ -75,7 +74,8 @@ function App() {
             country={state.country}
             humidity={state.humidity}
             wind={state.wind}
-            icon={state.icon}
+            sunset={state.sunset}
+            sunrise={state.sunrise}
             error={state.error}
             />
         </div>

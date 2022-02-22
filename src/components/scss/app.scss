@@ -30,23 +30,16 @@
     .App{
         .card__weather{
             width: 85%;
-            height:470px
-        }
-    }
-}
-@media screen and (max-width:330px) {
-    .App{
-        .card__weather{
             
-            height:500px
         }
     }
 }
+
 @media screen and (max-width:200px) {
     .App{
         .card__weather{
             width: 85%;
-            height:550px
+            
         }
     }
 }
