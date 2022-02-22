@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/weather_app/static/css/main.5fdde507.css",
+    "main.js": "/weather_app/static/js/main.1196cf36.js",
+    "static/media/124416-miui-8-rainy-weather-background-minimal-hd.png": "/weather_app/static/media/124416-miui-8-rainy-weather-background-minimal-hd.dfe1f0415bcce496af3a.png",
+    "index.html": "/weather_app/index.html",
+    "main.5fdde507.css.map": "/weather_app/static/css/main.5fdde507.css.map",
+    "main.1196cf36.js.map": "/weather_app/static/js/main.1196cf36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fdde507.css",
+    "static/js/main.1196cf36.js"
+  ]
+}
